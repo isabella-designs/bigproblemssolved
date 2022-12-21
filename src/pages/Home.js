@@ -6,7 +6,7 @@ import ReadMore from './ReadMore.js'
 
 function Home() {
     const [globalState, updateGlobalState] = useGlobalState()
-    const topics = [{ "img": "img source", "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }]
+    const topics = [{ "img": "img source", "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": "img source2", "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
     const [showLearnMore, setshowLearnMore] = useState(false);
     return (
         <div>

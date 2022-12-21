@@ -1,0 +1,14 @@
+.scrollableContainer {
+    background-color: blue;
+    padding: 10px;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    overflow-y: hidden;
+}
+
+.card {
+    background-color: green;
+    padding: 10px;
+}
