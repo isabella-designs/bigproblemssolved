@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
 
     return (
-    <div> 
+    <div class="footer"> 
         <Link className="Home" type="submit" to={'/Home'}>
                 Home
         </Link>
