@@ -1,0 +1,30 @@
+.toggle {
+    background-color:#8976E1; 
+    color:#8976E1; 
+    border-radius: 5px;
+}
+
+.county {
+    background-color:#F7CD5A; 
+    text-align: center;
+}
+
+.buttons {
+    background-color:#8976E1;
+    border: none;
+    color: #ECE9FD;
+}
+
+.buttons:active {
+    background-color:#ECE9FD;
+    border: none;
+    border-radius: 5px;
+    color: #8976E1;
+}
+
+.buttons:hover {
+    background-color:#ECE9FD;
+    border: none;
+    border-radius: 5px;
+    color: #8976E1;
+}

@@ -16,7 +16,7 @@ function Home() {
             <div class="scrollableContainer">
                 {topics.map((item, index) => (
                     <div className="card">
-                        <img src= {item.img}></img>
+                        <img class ="image" src= {item.img}></img>
                         <h1 class='topicHeader'>{item.headline}</h1>
                         <div class="bulletStyle">
                         {item.bullets.map((item, index) => (

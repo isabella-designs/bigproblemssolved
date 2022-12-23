@@ -1,0 +1,30 @@
+.scrollableContainer {
+    padding: 10px;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-columns: 70%;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    overflow-y: hidden;
+}
+
+.heading {
+    color: white;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+.topicHeader {
+    color: #C6D6FF;
+    padding: 15px;
+    font-size: 40px;
+    background-color: #2556D7;
+    border-radius: 25px;
+    width: fit-content;
+    margin: auto;
+}
+
+.overview {
+    text-align: center;
+    background-color: #618AF2;
+}

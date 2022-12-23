@@ -7,14 +7,14 @@ function Overview() {
     const [globalState, updateGlobalState] = useGlobalState()
     const graphs = [{ "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}]
     return (
-        <div>
-            <h1> Most Factual News</h1>
+        <div class="overview">
+            <h1 class='heading'> Most Factual News</h1>
             <div class="scrollableContainer">
                 {graphs.map((item, index) => (
-                    <div className="card">
+                    <div class="card">
                         <p>{item.headline}</p>
-                        <h1>{item.graphObject}</h1>
-
+                        <h1 class="topicHeader" > {item.graphObject}</h1>
+                    
                     </div>
                 ))}
             </div>

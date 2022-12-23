@@ -8,7 +8,7 @@ function County() {
     const [globalState, updateGlobalState] = useGlobalState()
     const graphs = [{ "headline": "Percent County in Good Health", "graphObject": "Temporary Place Holder"}]
     return (
-    <div> 
+    <div class = "county"> 
         <h1>County Information</h1>
             <div class="scrollableContainer">
                 {graphs.map((item, index) => (
@@ -18,10 +18,10 @@ function County() {
                     </div>
                 ))}
             </div>
-            <div>
-                <button>County</button>
-                <button>State</button>
-                <button>Nation</button>
+            <div class = "toggle">
+                <button class = "buttons">County</button>
+                <button class = "buttons">State</button>
+                <button class = "buttons">Nation</button>
             </div>
             <div>
                 <button>Questions</button>
