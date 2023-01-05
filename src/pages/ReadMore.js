@@ -2,11 +2,16 @@ import './ReadMore.css';
 import React from "react";
 import { useGlobalState } from "../GlobalState.js"
 
-function ReadMore() {
+function ReadMore({onClose}) {
     const [globalState, updateGlobalState] = useGlobalState()
+    const closeWindow = (event) => {
+        onClose() 
+        // closeWindow(true) 
+    }
+    
     return (
-        <div>
-        <button>close</button>
+        <div class = "readMore">
+        <button onClick = {closeWindow}>close</button>
         <h1>Title of Article</h1>
         <p>content goes here</p>
         </div>

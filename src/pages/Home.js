@@ -9,6 +9,15 @@ function Home() {
     const [globalState, updateGlobalState] = useGlobalState()
     const topics = [{ "img": sunscreen, "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
     const [showLearnMore, setshowLearnMore] = useState(false);
+    const onClick = (event) => {
+        setshowLearnMore(true)
+    }
+    const onClose = () => {
+        setshowLearnMore(false)
+    }
+    
+
+
     return (
         <div class="home">
             {console.log(globalState)}
@@ -23,14 +32,14 @@ function Home() {
                             <li>{item}</li>
                         ))}
                          </div>
-                        <button class="buttonStyle"> Learn More </button>
+                        <button  onClick = {onClick} class="buttonStyle"> Learn More </button>
 
                     </div>
                 ))}
 
             </div>
             {showLearnMore &&
-             <ReadMore>
+             <ReadMore props = {onClose}>
              </ReadMore>
             }
             <Footer>

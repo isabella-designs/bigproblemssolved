@@ -1,0 +1,12 @@
+.readMore {
+    background-color:#F5F5F5; 
+    color:#8976E1; 
+    border-radius: 20px;
+    position: fixed;
+    height: 70%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+    top: 5%;
+}
