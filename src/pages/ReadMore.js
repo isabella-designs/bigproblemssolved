@@ -1,12 +1,9 @@
 import './ReadMore.css';
 import React from "react";
-import { useGlobalState } from "../GlobalState.js"
 
-function ReadMore({onClose}) {
-    const [globalState, updateGlobalState] = useGlobalState()
+const ReadMore = ({onClose}) => {
     const closeWindow = (event) => {
         onClose() 
-        // closeWindow(true) 
     }
     
     return (

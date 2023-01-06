@@ -39,7 +39,7 @@ function Home() {
 
             </div>
             {showLearnMore &&
-             <ReadMore props = {onClose}>
+             <ReadMore onClose = {onClose}>
              </ReadMore>
             }
             <Footer>
