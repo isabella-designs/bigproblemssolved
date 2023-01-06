@@ -1,11 +1,22 @@
 import './Overview.css';
-import React from "react";
+import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
+import SpecificNewsTopics from './SpecificNewsTopics'
 
 function Overview() {
     const [globalState, updateGlobalState] = useGlobalState()
     const graphs = [{ "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}]
+    const [showLearnMore, setshowLearnMore] = useState(false);
+    const [clickedButton, setclickedButton] = useState("");
+    const onClick = (event) => {
+        setclickedButton(event.target.name)
+        setshowLearnMore(true)
+    }
+    const onClose = () => {
+        setshowLearnMore(false)
+        setclickedButton("")
+    }
     return (
         <div class="overview">
             <h1 class='heading'> Most Factual News</h1>
@@ -20,11 +31,15 @@ function Overview() {
             </div>
             <h1> Most Popular and Accurate News This Week</h1>
             <div>
-                <p>Disease</p>
-                <p>Cancer</p>
-                <p>Finance</p>
-                <p>Politics</p>
+                <button name="disease" onClick = {onClick}>Disease</button>
+                <button name="cancer" onClick = {onClick}>Cancer</button>
+                <button name="finance" onClick = {onClick}>Finance</button>
+                <button name="politics" onClick = {onClick}>Politics</button>
             </div>
+            {showLearnMore &&
+             <SpecificNewsTopics name = {clickedButton} onClose = {onClose}>
+             </SpecificNewsTopics>
+            }
             <Footer>
 
             </Footer>
