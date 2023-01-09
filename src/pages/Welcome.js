@@ -8,6 +8,7 @@ function Welcome() {
     // initializing constants for form options
     const newsTypes = ["Fox News", "New York Times", "Wall Street Journal", "CNN", "ABC News"]
     const newsTopics = ["Covid", "Health", "Politics"]
+    const undercoverNewsTopics = ["Sleep", "Botox", "Shoes"]
     const genderOptions = ["Female", "Male", "Other/Prefer Not to Say"]
     const raceOptions = ["Caucasian", "Asian"]
     const ageOptions = ["Under 18", "18-24"]
@@ -24,7 +25,8 @@ function Welcome() {
     const [age, setAge] = useState(globalState.age);
     const [newsTypeSelected, setNewsTypeSelected] = useState(globalState.newsTypeSelected);
     const [newsTopicsSelected, setNewsTopicsSelected] = useState(globalState.newsTopicsSelected);
-
+    const [undercoverNewsTopicsSelected, setunderCoverNewsTopicsSelected] = useState(globalState.underCoverTopicsSelected);
+    
     //handles change to zip code and checks validity
     const handleChange = (event) => {
         const value = event.target.value;

@@ -8,6 +8,7 @@ const initialState = {
     age: '',
     newsTypeSelected: [],
     newsTopicsSelected: [],
+    underCoverTopicsSelected: [],
 }
 
 // create the context object for delivering your state across your app.

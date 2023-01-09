@@ -2,6 +2,7 @@ import './Overview.css';
 import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
+import Graphs from './Graphs.js'
 import SpecificNewsTopics from './SpecificNewsTopics'
 
 function Overview() {
@@ -23,6 +24,7 @@ function Overview() {
             <div class="scrollableContainer">
                 {graphs.map((item, index) => (
                     <div class="card">
+                        <Graphs></Graphs>
                         <p>{item.headline}</p>
                         <h1 class="topicHeader" > {item.graphObject}</h1>
                     

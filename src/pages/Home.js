@@ -33,11 +33,12 @@ function Home() {
                         ))}
                          </div>
                         <button  onClick = {onClick} class="buttonStyle"> Learn More </button>
-
                     </div>
+                    
                 ))}
 
             </div>
+            <button onClick = {onClick} class="buttonStyle">Input Your Own Article</button>
             {showLearnMore &&
              <ReadMore onClose = {onClose}>
              </ReadMore>
