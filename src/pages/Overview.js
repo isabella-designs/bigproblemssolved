@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
 import Graphs from './Graphs.js'
+import Maps from './Maps.js'
 import SpecificNewsTopics from './SpecificNewsTopics'
 
 function Overview() {
@@ -25,6 +26,7 @@ function Overview() {
                 {graphs.map((item, index) => (
                     <div class="card">
                         <Graphs></Graphs>
+                        <Maps></Maps>
                         <p>{item.headline}</p>
                         <h1 class="topicHeader" > {item.graphObject}</h1>
                     

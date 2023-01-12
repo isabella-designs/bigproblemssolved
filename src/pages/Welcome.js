@@ -63,6 +63,19 @@ function Welcome() {
         setNewsTopicsSelected(updatedNewsTopic)
     }
 
+    const handleCheckUnderrepresentedTopic = (event) => {
+        var updatedNewsTopic = [...undercoverNewsTopicsSelected]
+        if (event.target.checked) {
+            updatedNewsTopic = [...undercoverNewsTopicsSelected, event.target.value]
+            console.log(updatedNewsTopic)
+        }
+        else {
+            updatedNewsTopic.splice(undercoverNewsTopicsSelected.indexOf(event.target.value), 1)
+            console.log(updatedNewsTopic)
+        }
+        setunderCoverNewsTopicsSelected(updatedNewsTopic)
+    }
+
     //handles gender select box changes
     const handleGenderChange = (event) => {
         setGender(event.target.value)
@@ -108,10 +121,17 @@ function Welcome() {
                         <span >{item}</span>
                     </div>
                 ))}
-                <p> What Topics in the News Are Most Important to You?</p>
+                <p> What Popular News Topics in the News Are Most Important to You?</p>
                 {newsTopics.map((item, index) => (
                     <div key={index}>
                         <input value={item} type="checkbox" onChange={handleCheckTopic} />
+                        <span >{item}</span>
+                    </div>
+                ))}
+                 <p> Which underrepresented topics Are You Interested in Learning More About</p>
+                {undercoverNewsTopics.map((item, index) => (
+                    <div key={index}>
+                        <input value={item} type="checkbox" onChange={handleCheckUnderrepresentedTopic} />
                         <span >{item}</span>
                     </div>
                 ))}
