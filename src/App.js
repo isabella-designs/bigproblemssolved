@@ -29,7 +29,7 @@ class App extends Component {
     if (isMobile) {
       return (
         <div className="AppMobile">
-          <p> Hello, Mobile World </p>
+          <Welcome/>
         </div>
       );
     }

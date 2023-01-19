@@ -10,7 +10,7 @@ function Welcome() {
     const newsTopics = ["Covid", "Health", "Politics"]
     const undercoverNewsTopics = ["Sleep", "Botox", "Shoes"]
     const genderOptions = ["Female", "Male", "Other/Prefer Not to Say"]
-    const raceOptions = ["Caucasian", "Asian"]
+    const raceOptions = ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White", "Prefer Not to Say"]
     const ageOptions = ["Under 18", "18-24"]
 
     //import global state
