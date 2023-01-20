@@ -8,6 +8,7 @@ const initialState = {
     age: '',
     newsTypeSelected: [],
     newsTopicsSelected: [],
+    fipsCode: "",
     underCoverTopicsSelected: [],
 }
 

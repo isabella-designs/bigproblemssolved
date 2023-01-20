@@ -106,6 +106,28 @@ function Welcome() {
             updateGlobalState("age", age)
             updateGlobalState("newsTypeSelected", newsTypeSelected)
             updateGlobalState("newsTopicsSelected", newsTopicsSelected)
+            const GSheetReader = require('g-sheets-api');
+            const options = {
+                apiKey: 'AIzaSyB7A4hg_vsCWGYAcRUZhqbC1rOZeIsap8M',
+                sheetId: '1y7C9XcxtejNV9_Y85SOO4c3LRF_8vP-zs8yV2kqdYF8',
+                sheetNumber: 1,
+                sheetName: 'zip_to_fip', // if sheetName is supplied, this will take precedence over sheetNumber
+                returnAllResults: false,
+                filter: {
+                  'ZIP': zipcode,
+                },
+              }
+              GSheetReader(
+                options,
+                results => {
+                  console.log(results)
+                  updateGlobalState("fipsCode", results[0]["STCOUNTYFP"])
+                 
+                },
+                error => {
+                    console.log(error)
+                }
+              );
         }
     }
 

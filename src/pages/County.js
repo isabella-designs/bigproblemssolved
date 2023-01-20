@@ -8,7 +8,9 @@ import FullCounty from './FullCounty.js'
 
 function County() {
     // add the state here so that it updates :)
+    const [globalState, updateGlobalState] = useGlobalState()
     const GSheetReader = require('g-sheets-api');
+    console.log(globalState.fipsCode)
     const options = {
         apiKey: 'AIzaSyB7A4hg_vsCWGYAcRUZhqbC1rOZeIsap8M',
         sheetId: '1i2OFosT-XimNUZGLWItjvzAA07LsxtNK0umjd0ZQA1s',
@@ -16,24 +18,24 @@ function County() {
         sheetName: 'state_df_full', // if sheetName is supplied, this will take precedence over sheetNumber
         returnAllResults: false,
         filter: {
-          'FIPS': '12129',
+          'FIPS': globalState.fipsCode,
         },
       }
-      var sheetResults = null;
-      var goodHealthPercentage = 0;
+      const [goodHealthPercentage, setgoodHealthPercentage] = useState(0);
+      const [sheetResults, setsheetResults] = useState([]);
       GSheetReader(
         options,
         results => {
           console.log(results)
-          sheetResults = results
-          goodHealthPercentage = sheetResults["% Fair or Poor Health"]
+          setsheetResults(results[0])
+          setgoodHealthPercentage(100 - results[0]["% Fair or Poor Health"])
         },
         error => {
             console.log(error)
         }
       );
-    const [globalState, updateGlobalState] = useGlobalState()
-    const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage}]
+   
+    const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const onClick = (event) => {
         setshowLearnMore(true)
@@ -64,7 +66,7 @@ function County() {
             </div>
             <button onClick = {onClick}>Full Stats</button>
             {showLearnMore &&
-             <FullCounty onClose = {onClose}>
+             <FullCounty data = {sheetResults} onClose = {onClose}>
              </FullCounty>
             }
          <Footer>
