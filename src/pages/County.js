@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from "./Footer.js";
 import FullCounty from './FullCounty.js'
+import Maps from './Maps.js'
 
 
 
@@ -37,11 +38,16 @@ function County() {
    
     const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}]
     const [showLearnMore, setshowLearnMore] = useState(false);
+    const [showMap, setshowMap] = useState(false);
     const onClick = (event) => {
         setshowLearnMore(true)
     }
+    const onMapClick = (event) => {
+        setshowMap(true)
+    }
     const onClose = () => {
         setshowLearnMore(false)
+        setshowMap(false)
     }
     return (
     <div class = "county"> 
@@ -49,6 +55,8 @@ function County() {
             <div class="scrollableContainer">
                 {graphs.map((item, index) => (
                     <div className="card">
+                        <div className = "circle">  
+                        </div>
                         <p>{item.headline}</p>
                         <h1>{item.graphObject}</h1>
                     </div>
@@ -59,15 +67,24 @@ function County() {
                 <button class = "buttons">State</button>
                 <button class = "buttons">Nation</button>
             </div>
-            <div>
-                <button>Questions</button>
-                <button>Recent News</button>
-                <button>Stats</button>
+            <div class = "block">
+            <div class = "column1"> 
+            <button>Biggest County Risk</button>
+            </div> 
+            <div class = "column2">
+                <button onClick = {onMapClick}>Map Visualization</button>
+                <button>Recent News For Biggest County Risk</button>
+            </div>    
+                
             </div>
-            <button onClick = {onClick}>Full Stats</button>
+            <button onClick = {onClick}>Full County Stats</button>
             {showLearnMore &&
              <FullCounty data = {sheetResults} onClose = {onClose}>
              </FullCounty>
+            }
+            {showMap &&
+             <Maps data = {sheetResults} onClose = {onClose}>
+             </Maps>
             }
          <Footer>
 

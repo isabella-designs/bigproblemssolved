@@ -3,8 +3,12 @@ import HighchartsReact from 'highcharts-react-official';
 import React from "react";
 import mapDataUS from './MapDataUS.js' 
 require('highcharts/modules/map')(Highcharts);
-const Maps = () => {
-const data = []
+const Maps = ({data, onClose}) => {
+const dummyData = []
+const closeWindow = (event) => {
+    onClose() 
+    // closeWindow(true) 
+}
 
 const mapOptions = {
     title: {
@@ -19,13 +23,14 @@ const mapOptions = {
       {
         mapData: mapDataUS,
         name: 'US',
-        data: data
+        data: dummyData
       }
     ]
   };
 
     return (
         <div>
+          <button onClick = {closeWindow}>close</button>
             <HighchartsReact highcharts = {Highcharts} options = {mapOptions} constructorType={'mapChart'}></HighchartsReact>
             
         </div>

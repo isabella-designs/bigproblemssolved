@@ -26,7 +26,6 @@ function Overview() {
                 {graphs.map((item, index) => (
                     <div class="card">
                         <Graphs></Graphs>
-                        <Maps></Maps>
                         <p>{item.headline}</p>
                         <h1 class="topicHeader" > {item.graphObject}</h1>
                     
