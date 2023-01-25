@@ -32,3 +32,49 @@
 .circle {
     color: #8976E1;
 }
+
+.block {
+    display: flex;
+    padding-top: 10px;
+}
+
+.column1 {
+    flex: 50%;
+    border-radius: 5px;
+    background-color: #FFF7E0;
+    margin-left: 8px;
+    width: 70%;
+}
+
+.column2 {
+    flex: 50%;
+    border-radius: 5px;
+   
+}
+
+.risk {
+    border-radius: 5px;
+    background-color: #F45653;
+    width: 70%;
+    border: none;
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.map {
+    border-radius: 5px;
+    background-color: #E7FFE7;
+    width: 70%;
+    border: none;
+    padding: 20px;
+   
+}
+
+.fullStats {
+    background-color: #EEB311;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    margin-top: 20px;
+   
+}

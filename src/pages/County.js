@@ -35,8 +35,8 @@ function County() {
             console.log(error)
         }
       );
-   
-    const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}]
+    
+    const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}, { "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const [showMap, setshowMap] = useState(false);
     const onClick = (event) => {
@@ -69,15 +69,17 @@ function County() {
             </div>
             <div class = "block">
             <div class = "column1"> 
-            <button>Biggest County Risk</button>
+            <p>Biggest County Risk</p>
+            <p>What Biggest Risk Is</p>
+            <p>This is 10% better than national average</p>
             </div> 
             <div class = "column2">
-                <button onClick = {onMapClick}>Map Visualization</button>
-                <button>Recent News For Biggest County Risk</button>
+                <button class = "risk">See Recent News for Biggest County Risk</button>
+                <button class = "map" onClick = {onMapClick}>Map Visualization</button>
             </div>    
                 
             </div>
-            <button onClick = {onClick}>Full County Stats</button>
+            <button class = "fullStats" onClick = {onClick}>Full County Stats</button>
             {showLearnMore &&
              <FullCounty data = {sheetResults} onClose = {onClose}>
              </FullCounty>

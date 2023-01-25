@@ -1,6 +1,7 @@
 import './FullCounty.css';
 import React from "react";
 import { useGlobalState } from "../GlobalState.js"
+import close from "../assets/close.png"
 
 
 function FullCounty({data, onClose}) {
@@ -15,13 +16,12 @@ function FullCounty({data, onClose}) {
     "Food Environment Index",
     "% Physically Inactive",
     "% With Access to Exercise Opportunities",
-    "Chlamydia Rate",
     "Primary Care Physicians Rate",
     "Mental Health Provider Rate",
     "Preventable Hospitalization Rate",
     "% With Annual Mammogram",
     "% Vaccinated",
-    "High School Graduation Rate",
+    "High School Graduation Percentage",
     "% Some College",
     "% Unemployed",
     "% Children in Poverty",
@@ -35,7 +35,10 @@ function FullCounty({data, onClose}) {
     
     return (
         <div class = "FullCounty">
-        <button onClick = {closeWindow}>close</button>
+        <button class = "closeButton" onClick = {closeWindow}>
+            <img src = {close}>
+            </img>
+        </button>
         <h1>{data["County"]} County Full Statistics</h1>
         <table class = "table">
             <tr class = "tableRow">
@@ -58,7 +61,7 @@ function FullCounty({data, onClose}) {
                             {data[item]}
                         </td>
                         <td class = "tableData">
-                            placeholder
+                            {data[item + " National"]}
                         </td>
                     </tr>
                 ))}
