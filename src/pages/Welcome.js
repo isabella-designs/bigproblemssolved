@@ -7,8 +7,8 @@ function Welcome() {
 
     // initializing constants for form options
     const newsTypes = ["Fox News", "New York Times", "Wall Street Journal", "CNN", "ABC News"]
-    const newsTopics = ["Covid", "Health", "Politics"]
-    const undercoverNewsTopics = ["Sleep", "Botox", "Shoes"]
+    const newsTopics = ["Inflation", "Covid-19", "Violent Crime", "Affordability of Healthcare", "Unemployment"]
+    const undercoverNewsTopics = ["Effects of Constant News on Sleep", "Women's Rights", "Inclusive News for Historically Excluded Groups", "Preventional Health"]
     const genderOptions = ["Female", "Male", "Other/Prefer Not to Say"]
     const raceOptions = ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White", "Prefer Not to Say"]
     const ageOptions = ["Under 18", "18-24"]
@@ -136,66 +136,66 @@ function Welcome() {
             <p> Welcome to Big Problems Solved! Fill out the form below to extract the facts from the fears and fads in the media </p>
             <div className="CheckBox">
                 <p> Select Your Preferences/Demographics Below</p>
-                <p> What Sources of News Do You Consume?</p>
-                {newsTypes.map((item, index) => (
-                    <div key={index}>
-                        <input value={item} type="checkbox" onChange={handleCheck} />
-                        <span >{item}</span>
-                    </div>
-                ))}
-                <p> What Popular News Topics in the News Are Most Important to You?</p>
+                <div class = "check-box newsSourceConsumption">
+                    <p class = "heading1"> What Sources of News Do You Consume?</p>
+                    {newsTypes.map((item, index) => (
+                        <div class = "bullets" key={index}>
+                            <input  value={item} type="checkbox" onChange={handleCheck} />
+                            <span >{item}</span>
+                        </div>
+                    ))}
+                </div>
+                <div class = "check-box popularNews"> 
+                <p class = "heading1"> What Popular News Topics in the News Are Most Important to You?</p>
                 {newsTopics.map((item, index) => (
-                    <div key={index}>
+                    <div class = "bullets" key={index}>
                         <input value={item} type="checkbox" onChange={handleCheckTopic} />
                         <span >{item}</span>
                     </div>
                 ))}
-                 <p> Which underrepresented topics Are You Interested in Learning More About</p>
+                </div>
+                <div class = "check-box undercover"> 
+                 <p class = "heading1"> Which underrepresented topics Are You Interested in Learning More About</p>
                 {undercoverNewsTopics.map((item, index) => (
-                    <div key={index}>
+                    <div class = "bullets" key={index}>
                         <input value={item} type="checkbox" onChange={handleCheckUnderrepresentedTopic} />
                         <span >{item}</span>
                     </div>
                 ))}
+                </div>
             </div>
-            <div className="select-container">
-                <p> Select Your Gender </p>
+            <div className="select-container gender">
+                <p class = "heading1"> Select Your Gender </p>
                 <select onChange={handleGenderChange}>
                     {genderOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
                 </select>
             </div>
-            <div className="select-container">
-                <p> Select Your Age </p>
+            <div className="select-container age">
+                <p class = "heading1"> Select Your Age </p>
                 <select onChange={handleAgeChange}>
                     {ageOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
                 </select>
             </div>
-            <div className="select-container">
-                <p> Select Your Race </p>
+            <div className="select-container race">
+                <p class = "heading1"> Select Your Race </p>
                 <select onChange={handleRaceChange}>
                     {raceOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
                 </select>
             </div>
-            <div className="Zipcode">
-                <p> Input Your Zipcode </p>
+            <div className="zipcodeContainer">
+                <p class = "heading1"> Input Your Zipcode </p>
                 <input type="text" id="zipcode" name="zipcode" onChange={handleChange} />
-                <label >Zipcode</label>
+                
             </div>
             <Link className="SubmitButton" type="submit" onClick = {onSubmit} to={formValid ? '/Home' : '#'}>
                 Submit
             </Link>
-            <p>
-                {zipcode}
-            </p>
-            <p>
-                {zipCodeValid.toString()}
-            </p>
         </div>
     );
 }

@@ -1,0 +1,78 @@
+.newsSourceConsumption {
+    background-color: #F1FBF5;
+}
+
+.popularNews {
+    background-color: #F3F9FB;
+}
+
+.undercover {
+    background-color: #F6F8FD;
+}
+
+.gender {
+    background-color: #F8D6CC;
+}
+
+.age {
+    background-color: #FFABA5;
+}
+
+.race {
+    background-color: #FFE694;
+}
+
+.check-box {
+    width: 70%;
+    border-radius: 8px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    margin-bottom: 15px;
+}
+
+.bullets {
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+.heading1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.select-container {
+    width: 70%;
+    border-radius: 8px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    margin-bottom: 15px;
+}
+
+.zipcodeContainer {
+    width: 70%;
+    border-radius: 8px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    margin-bottom: 15px;
+    background-color: #EBFFFA;
+}
+
+.SubmitButton {
+    width: 70%;
+    color: black;
+    text-decoration-line: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    background-color: #DF6053;
+    border-radius: 8px;
+    margin: auto;
+    border: none;
+    font-weight: bold;
+}

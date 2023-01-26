@@ -29,7 +29,7 @@ function County() {
         results => {
           console.log(results)
           setsheetResults(results[0])
-          setgoodHealthPercentage(100 - results[0]["% Fair or Poor Health"])
+          setgoodHealthPercentage((100 - results[0]["% Fair or Poor Health"]).toPrecision(4))
         },
         error => {
             console.log(error)
@@ -70,8 +70,8 @@ function County() {
             <div class = "block">
             <div class = "column1"> 
             <p>Biggest County Risk</p>
-            <p>What Biggest Risk Is</p>
-            <p>This is 10% better than national average</p>
+            <p>{sheetResults["Biggest Risk"]}</p>
+            <p>This is {sheetResults["Biggest Risk Difference"]}% worse than national average</p>
             </div> 
             <div class = "column2">
                 <button class = "risk">See Recent News for Biggest County Risk</button>
