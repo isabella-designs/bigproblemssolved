@@ -32,6 +32,7 @@ function Overview() {
                     </div>
                 ))}
             </div>
+            <div class = "topics"> 
             <h1> Most Popular and Accurate News This Week</h1>
             <div>
                 <button name="disease" onClick = {onClick}>Disease</button>
@@ -43,6 +44,7 @@ function Overview() {
              <SpecificNewsTopics name = {clickedButton} onClose = {onClose}>
              </SpecificNewsTopics>
             }
+            </div>
             <Footer>
 
             </Footer>

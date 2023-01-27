@@ -28,3 +28,14 @@
     text-align: center;
     background-color: #618AF2;
 }
+
+
+.topics {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding: 19px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+}

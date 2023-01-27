@@ -11,7 +11,7 @@ function Welcome() {
     const undercoverNewsTopics = ["Effects of Constant News on Sleep", "Women's Rights", "Inclusive News for Historically Excluded Groups", "Preventional Health"]
     const genderOptions = ["Female", "Male", "Other/Prefer Not to Say"]
     const raceOptions = ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White", "Prefer Not to Say"]
-    const ageOptions = ["Under 18", "18-24"]
+    const ageOptions = ["Under 18", "18-24", "25-35", "36-45", "46-55", "55+"]
 
     //import global state
     const [globalState, updateGlobalState] = useGlobalState()
@@ -31,8 +31,9 @@ function Welcome() {
     const handleChange = (event) => {
         const value = event.target.value;
         setZipcode(value)
-        setZipCodeValid(isUSAZipCode(value))
-        setFormValid(true)
+        const validZipcode = isUSAZipCode(value)
+        setZipCodeValid(validZipcode)
+        setFormValid(validZipcode)
     }
 
     //handles check box changes to news types consumed
@@ -93,6 +94,7 @@ function Welcome() {
 
     //checks entered zip code against accepted regex
     const isUSAZipCode = (str) => {
+        console.log(/^\d{5}(-\d{4})?$/.test(str))
         return /^\d{5}(-\d{4})?$/.test(str);
     }
 
@@ -133,9 +135,8 @@ function Welcome() {
 
     return (
         <div className="AppMobile">
-            <p> Welcome to Big Problems Solved! Fill out the form below to extract the facts from the fears and fads in the media </p>
+            <p class = "bigHead"> Welcome to Big Problems Solved! Fill out the form below to extract the facts from the fears and fads in the media personalized to you. </p>
             <div className="CheckBox">
-                <p> Select Your Preferences/Demographics Below</p>
                 <div class = "check-box newsSourceConsumption">
                     <p class = "heading1"> What Sources of News Do You Consume?</p>
                     {newsTypes.map((item, index) => (
@@ -167,6 +168,7 @@ function Welcome() {
             <div className="select-container gender">
                 <p class = "heading1"> Select Your Gender </p>
                 <select onChange={handleGenderChange}>
+                <option disabled selected value> </option>
                     {genderOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
@@ -175,6 +177,7 @@ function Welcome() {
             <div className="select-container age">
                 <p class = "heading1"> Select Your Age </p>
                 <select onChange={handleAgeChange}>
+                <option disabled selected value> </option>
                     {ageOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
@@ -183,6 +186,7 @@ function Welcome() {
             <div className="select-container race">
                 <p class = "heading1"> Select Your Race </p>
                 <select onChange={handleRaceChange}>
+                <option disabled selected value></option>
                     {raceOptions.map((option, index) => (
                         <option value={option}>{option}</option>
                     ))}
@@ -196,6 +200,7 @@ function Welcome() {
             <Link className="SubmitButton" type="submit" onClick = {onSubmit} to={formValid ? '/Home' : '#'}>
                 Submit
             </Link>
+            {console.log(formValid)}
         </div>
     );
 }
