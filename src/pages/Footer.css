@@ -1,12 +1,36 @@
 .footer {
-    margin: 20px;
     background-color: pink;
     border-radius: 25px;
-    padding: 20px;
- 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    left: 50%;
+    margin-left: -37.5%;
+    text-align: center;
 }
 
-img {
-    width: 50px;
+.bottom-nav-link {
+    color: black;
+}
 
+
+.bottom-nav-link:active {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.icon-row {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.item {
+    margin-left: 25px;
+    margin-right: 25px;
 }
