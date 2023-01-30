@@ -51,7 +51,7 @@ function County() {
     }
     return (
     <div class = "county"> 
-        <h1>County Information</h1>
+        <h1 class="heading">County Information</h1>
             <div class="scrollableContainer">
                 {graphs.map((item, index) => (
                     <div className="card">
@@ -92,7 +92,6 @@ function County() {
 
         </Footer>
     </div>
-
     )
 }
 

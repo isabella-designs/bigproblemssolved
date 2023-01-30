@@ -1,3 +1,9 @@
+.heading {
+    color: white;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
 .toggle {
     background-color:#8976E1; 
     color:#8976E1; 
@@ -7,6 +13,7 @@
 .county {
     background-color:#F7CD5A; 
     text-align: center;
+    min-height: 100vh;
 }
 
 .buttons {

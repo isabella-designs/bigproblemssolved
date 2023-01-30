@@ -1,3 +1,7 @@
 .App, .AppMobile {
   text-align: center;
 }
+
+h1 {
+  margin-top: 0px;
+}

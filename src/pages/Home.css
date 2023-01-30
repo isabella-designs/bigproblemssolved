@@ -17,6 +17,7 @@
 .home {
     text-align: center;
     background-color: #142567;
+    min-height: 100vh;
 }
 
 .heading {
