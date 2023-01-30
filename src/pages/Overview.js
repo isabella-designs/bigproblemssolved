@@ -8,7 +8,7 @@ import SpecificNewsTopics from './SpecificNewsTopics'
 
 function Overview() {
     const [globalState, updateGlobalState] = useGlobalState()
-    const graphs = [{ "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}]
+    const graphs = [{ "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}, { "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}, { "headline": "Percent Non-biased News", "graphObject": "Temporary Place Holder"}]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const [clickedButton, setclickedButton] = useState("");
     const onClick = (event) => {

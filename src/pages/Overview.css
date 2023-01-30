@@ -2,10 +2,35 @@
     padding: 10px;
     overflow-x: scroll;
     display: grid;
-    grid-auto-columns: 70%;
+    grid-auto-columns: 90%;
     grid-auto-flow: column;
     grid-column-gap: 20px;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+}
+
+.card {
+    background-color: #F6F8EA;
+    padding: 10px;
+    border-radius: 25px;
+    scroll-snap-align: center;
+    transition: all 0.2s;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb,
+.scrollableContainer::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+
+.scrollableContainer::-webkit-scrollbar-thumb {
+    background: #2556D7;
+}
+  
+.scrollableContainer::-webkit-scrollbar-track {
+    background: #F6F8EA;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .heading {

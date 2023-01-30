@@ -7,7 +7,7 @@ import sunscreen from '../assets/sunscreen.jpg'
 
 function Home() {
     const [globalState, updateGlobalState] = useGlobalState()
-    const topics = [{ "img": sunscreen, "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
+    const topics = [{ "img": sunscreen, "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const onClick = (event) => {
         setshowLearnMore(true)
@@ -38,7 +38,7 @@ function Home() {
                 ))}
 
             </div>
-            <button onClick = {onClick} class="buttonStyle">Input Your Own Article</button>
+            <button onClick = {onClick} class="buttonStyle own-article">Input Your Own Article</button>
             {showLearnMore &&
              <ReadMore onClose = {onClose}>
              </ReadMore>
