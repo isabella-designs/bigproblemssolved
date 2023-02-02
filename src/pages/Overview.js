@@ -35,10 +35,10 @@ function Overview() {
             <div class = "topics"> 
             <h1> Most Popular and Accurate News This Week</h1>
             <div>
-                <button name="disease" onClick = {onClick}>Disease</button>
-                <button name="cancer" onClick = {onClick}>Cancer</button>
-                <button name="finance" onClick = {onClick}>Finance</button>
-                <button name="politics" onClick = {onClick}>Politics</button>
+                <button class = "newsButton" name="disease" onClick = {onClick}>Disease</button>
+                <button class = "newsButton" name="cancer" onClick = {onClick}>Cancer</button>
+                <button class = "newsButton" name="finance" onClick = {onClick}>Finance</button>
+                <button class = "newsButton" name="politics" onClick = {onClick}>Politics</button>
             </div>
             {showLearnMore &&
              <SpecificNewsTopics name = {clickedButton} onClose = {onClose}>

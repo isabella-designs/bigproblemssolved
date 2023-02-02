@@ -14,7 +14,12 @@ function SpecificNewsTopics({onClose, name}) {
         <div class = "FullCounty">
         <button onClick = {closeWindow}>close</button>
         <h1>{name}</h1>
-        <p>content goes here</p>
+        <div class = "bulletSummary"> 
+        <p class = "summaryHeader">content summary</p>
+        <p class = "bullets">
+            sample bullet
+        </p>
+        </div>
         </div>
     )
 }

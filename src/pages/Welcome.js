@@ -19,6 +19,7 @@ function Welcome() {
     // create local state values using useState hook
     const [formValid, setFormValid] = useState(false);
     const [zipCodeValid, setZipCodeValid] = useState(false);
+    const [showError, setshowError] = useState(false);
     const [zipcode, setZipcode] = useState(globalState.zipcode);
     const [gender, setGender] = useState(globalState.gender);
     const [race, setRace] = useState(globalState.race);
@@ -99,7 +100,6 @@ function Welcome() {
     }
 
     const onSubmit = () => {
-        {console.log(formValid)}
         if (formValid) {
             {console.log("hi")}
             updateGlobalState("zipcode", zipcode)
@@ -130,6 +130,9 @@ function Welcome() {
                     console.log(error)
                 }
               );
+        }
+        else {
+            setshowError(true)
         }
     }
 
@@ -193,9 +196,11 @@ function Welcome() {
                 </select>
             </div>
             <div className="zipcodeContainer">
-                <p class = "heading1"> Input Your Zipcode </p>
+                <p class = "heading1"> *Input Your Zipcode </p>
                 <input type="text" id="zipcode" name="zipcode" onChange={handleChange} />
-                
+                {showError &&
+                    <p> Error! Enter a valid zipcode to submit</p>
+                }
             </div>
             <Link className="SubmitButton" type="submit" onClick = {onSubmit} to={formValid ? '/Home' : '#'}>
                 Submit
