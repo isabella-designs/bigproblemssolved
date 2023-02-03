@@ -15,9 +15,15 @@ function SpecificNewsTopics({onClose, name}) {
         <button onClick = {closeWindow}>close</button>
         <h1>{name}</h1>
         <div class = "bulletSummary"> 
-        <p class = "summaryHeader">content summary</p>
+        <p class = "summaryHeader">Content Summary</p>
         <p class = "bullets">
             sample bullet
+        </p>
+        </div>
+        <div class = "bulletSummary"> 
+        <p class = "summaryHeader">Full Article Links</p>
+        <p class = "bullets">
+            tagged links
         </p>
         </div>
         </div>

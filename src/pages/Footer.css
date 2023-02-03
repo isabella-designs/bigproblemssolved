@@ -1,5 +1,5 @@
 .footer {
-    background-color: pink;
+    background-color: #FFF9E9;
     border-radius: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -13,16 +13,16 @@
 }
 
 .bottom-nav-link {
-    color: black;
+    color: #142567;
 }
 
 
 .bottom-nav-link:active {
-    color: white;
+    color: #DF6053;
 }
 
 .active {
-    color: white;
+    color: #DF6053;
 }
 
 .icon-row {

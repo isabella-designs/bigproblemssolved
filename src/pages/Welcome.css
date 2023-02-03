@@ -3,7 +3,7 @@
 }
 
 .popularNews {
-    background-color: #F3F9FB;
+    background-color: #FDF2F1;
 }
 
 .undercover {
@@ -11,15 +11,15 @@
 }
 
 .gender {
-    background-color: #F8D6CC;
+    background-color: #FCF0EA;
 }
 
 .age {
-    background-color: #FFABA5;
+    background-color: #EFF4FE;
 }
 
 .race {
-    background-color: #FFE694;
+    background-color: #F3F9FB;
 }
 
 .check-box {
@@ -60,17 +60,17 @@
     padding-bottom: 15px;
     padding-top: 8px;
     margin-bottom: 15px;
-    background-color: #EBFFFA;
+    background-color: #FFD6D3;
 }
 
 .SubmitButton {
     width: 70%;
-    color: black;
+    color: white;
     text-decoration-line: none;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
-    background-color: #DF6053;
+    background-color: #142567;
     border-radius: 8px;
     margin: auto;
     border: none;

@@ -11,7 +11,7 @@
 }
 
 .card {
-    background-color: #F6F8EA;
+    background-color: #f3f7ff;
     padding: 10px;
     border-radius: 25px;
     scroll-snap-align: center;
@@ -28,7 +28,7 @@
 }
   
 .scrollableContainer::-webkit-scrollbar-track {
-    background: #F6F8EA;
+    background: #f3f7ff;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -56,7 +56,7 @@
 
 
 .topics {
-    background-color: white;
+    background-color: #f3f7ff;
     width: fit-content;
     margin: auto;
     margin-top: 20px;
@@ -69,7 +69,7 @@
 
 .newsButton {
     border-radius: 5px;
-    background-color: #FFEAED;
+    background-color: #618AF2;
     width: 40%;
     border-radius: 25px;
     height: 130px;
@@ -79,7 +79,7 @@
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 30px;
-    color: #E7A1AB;
+    color: #132f75;
     font-weight: bolder;
     font-size: 25px;
 

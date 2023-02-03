@@ -2,6 +2,7 @@ import './FullCounty.css';
 import React from "react";
 import { useGlobalState } from "../GlobalState.js"
 import close from "../assets/close.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function FullCounty({data, onClose}) {
@@ -36,8 +37,7 @@ function FullCounty({data, onClose}) {
     return (
         <div class = "FullCounty">
         <button class = "closeButton" onClick = {closeWindow}>
-            <img src = {close}>
-            </img>
+            <FontAwesomeIcon icon="fa-solid fa-xmark" />
         </button>
         <h1>{data["County"]} County Full Statistics</h1>
         <table class = "table">
