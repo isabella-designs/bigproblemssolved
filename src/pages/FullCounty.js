@@ -3,6 +3,7 @@ import React from "react";
 import { useGlobalState } from "../GlobalState.js"
 import close from "../assets/close.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 function FullCounty({data, onClose}) {
@@ -37,9 +38,9 @@ function FullCounty({data, onClose}) {
     return (
         <div class = "FullCounty">
         <button class = "closeButton" onClick = {closeWindow}>
-            <FontAwesomeIcon icon="fa-solid fa-xmark" />
+            <FontAwesomeIcon className = "fa-3x" icon= {faXmark} />
         </button>
-        <h1>{data["County"]} County Full Statistics</h1>
+        <h1 class = "countyName">{data["County"]} County Full Statistics</h1>
         <table class = "table">
             <tr class = "tableRow">
                 <th class = "tableHeader">

@@ -1,4 +1,4 @@
-.readMore {
+.inputArticle {
     background-color:#F5F5F5; 
     color:#8976E1; 
     border-radius: 20px;
@@ -11,11 +11,24 @@
     top: 5%;
 }
 
-
 .closeButton {
     border: none;
     float: right;
     background-color: transparent;
     padding-top: 10px;
     padding-right: 20px;
+}
+
+
+.buttonInputStyle {
+    color: #97281D;
+    padding: 15px;
+    font-size: 30px;
+    background-color: #DF6053;
+    border-radius: 25px;
+    width: fit-content;
+    margin: auto;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
 }
