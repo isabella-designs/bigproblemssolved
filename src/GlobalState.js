@@ -10,6 +10,7 @@ const initialState = {
     newsTopicsSelected: [],
     fipsCode: "",
     underCoverTopicsSelected: [],
+    countyData: {},
 }
 
 // create the context object for delivering your state across your app.

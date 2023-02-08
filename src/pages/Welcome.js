@@ -119,17 +119,43 @@ function Welcome() {
                   'ZIP': zipcode,
                 },
               }
+
+               
+             // this one is for the zip code and fips code
               GSheetReader(
                 options,
                 results => {
                   console.log(results)
                   updateGlobalState("fipsCode", results[0]["STCOUNTYFP"])
-                 
+                  const countyOptions = {
+                    apiKey: 'AIzaSyB7A4hg_vsCWGYAcRUZhqbC1rOZeIsap8M',
+                    sheetId: '1i2OFosT-XimNUZGLWItjvzAA07LsxtNK0umjd0ZQA1s',
+                    sheetNumber: 1,
+                    sheetName: 'state_df_full',  
+                    returnAllResults: false,
+                    filter: {
+                      'FIPS': results[0]["STCOUNTYFP"],
+                    },
+                  }
+                  GSheetReader(
+                    countyOptions,
+                    results => {
+                      console.log(results)
+                      updateGlobalState("countyData", results[0])
+                     
+                    },
+                    error => {
+                        console.log(error)
+                    }
+                  );
                 },
                 error => {
                     console.log(error)
                 }
               );
+
+              // this one is for the counties
+              
         }
         else {
             setshowError(true)

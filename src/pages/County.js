@@ -1,5 +1,5 @@
 import './County.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from "./Footer.js";
 import FullCounty from './FullCounty.js'
@@ -10,32 +10,12 @@ import Maps from './Maps.js'
 function County() {
     // add the state here so that it updates :)
     const [globalState, updateGlobalState] = useGlobalState()
-    const GSheetReader = require('g-sheets-api');
-    console.log(globalState.fipsCode)
-    const options = {
-        apiKey: 'AIzaSyB7A4hg_vsCWGYAcRUZhqbC1rOZeIsap8M',
-        sheetId: '1i2OFosT-XimNUZGLWItjvzAA07LsxtNK0umjd0ZQA1s',
-        sheetNumber: 1,
-        sheetName: 'state_df_full', // if sheetName is supplied, this will take precedence over sheetNumber
-        returnAllResults: false,
-        filter: {
-          'FIPS': globalState.fipsCode,
-        },
-      }
+    
       const [goodHealthPercentage, setgoodHealthPercentage] = useState(0);
       const [sheetResults, setsheetResults] = useState([]);
-      GSheetReader(
-        options,
-        results => {
-          console.log(results)
-          setsheetResults(results[0])
-          setgoodHealthPercentage((100 - results[0]["% Fair or Poor Health"]).toPrecision(4))
-        },
-        error => {
-            console.log(error)
-        }
-      );
-    
+    useEffect(()=>{
+        setgoodHealthPercentage((100 - globalState.countyData["% Fair or Poor Health"]).toPrecision(4))
+    })
     const graphs = [{ "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}, { "headline": "Percent County in Good Health", "graphObject": goodHealthPercentage + "%"}]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const [showMap, setshowMap] = useState(false);
@@ -77,7 +57,7 @@ function County() {
                 <button class = "risk">See Recent News for Biggest County Risk</button>
                 <button class = "map" onClick = {onMapClick}>Map Visualization</button>
             </div>    
-                
+
             </div>
             <button class = "fullStats" onClick = {onClick}>Full County Stats</button>
             {showLearnMore &&
