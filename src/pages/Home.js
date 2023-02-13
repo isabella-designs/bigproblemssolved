@@ -8,7 +8,7 @@ import sunscreen from '../assets/sunscreen.jpg'
 
 function Home() {
     const [globalState, updateGlobalState] = useGlobalState()
-    const topics = [{ "img": sunscreen, "headline": "Skin cancer", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
+    const topics = [{ "img": sunscreen, "headline": "Skin cancer", "bullets": ["Covered in __% of news", "Non-bias news articles covering the topic: ", "Affecting ____% of your county"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }, { "img": sunscreen, "headline": "Skin cancer2", "bullets": ["Covered", "non-bias", "Affecting"] }]
     const [showLearnMore, setshowLearnMore] = useState(false);
     const [showInputArticle, setshowInputArticle] = useState(false);
     const onClick = (event) => {
