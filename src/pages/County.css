@@ -5,9 +5,12 @@
 }
 
 .toggle {
-    background-color:#8976E1; 
-    color:#8976E1; 
+    background-color:#2a196e; 
+    color:#2a196e; 
     border-radius: 5px;
+    margin-top: 10px;
+    padding: 6px;
+   
 }
 
 .county {
@@ -17,9 +20,12 @@
 }
 
 .buttons {
-    background-color:#8976E1;
+    background-color:#2a196e;
     border: none;
     color: #ECE9FD;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;;
 }
 
 .buttons:active {
@@ -33,7 +39,7 @@
     background-color:#ECE9FD;
     border: none;
     border-radius: 5px;
-    color: #8976E1;
+    color: #2a196e;
 }
 
 .circle {
@@ -51,6 +57,10 @@
     background-color: #FFF7E0;
     margin-left: 8px;
     width: 70%;
+    color: #d4a823;
+    font-weight: bold;
+    font-size: 20px;
+    
 }
 
 .column2 {
@@ -66,6 +76,9 @@
     border: none;
     padding: 16px;
     margin-bottom: 10px;
+    color: #9c1f1d;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .map {
@@ -74,6 +87,9 @@
     width: 70%;
     border: none;
     padding: 20px;
+    color: #688668;
+    font-weight: bold;
+    font-size: 20px;
    
 }
 
@@ -83,5 +99,9 @@
     border: none;
     width: 90%;
     margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    color: #6e5100;
+    font-size: 20px;
    
 }

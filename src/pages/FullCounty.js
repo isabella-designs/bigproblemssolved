@@ -67,7 +67,7 @@ function FullCounty({data, onClose}) {
                     </tr>
                 ))}
         </table>
-        <p>Add the footer to describe confusing labels and year of data</p>
+        <p>**Years of Potential Life Lost Rate is cumulative for the entire county**</p>
         </div>
     )
 }
