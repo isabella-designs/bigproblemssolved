@@ -61,7 +61,7 @@ const Circle = ({value}) => {
                 color: Highcharts.getOptions().colors[0],
                 radius: '112%',
                 innerRadius: '88%',
-                y: value
+                y: Number(value)
             }]
         }]
     }
