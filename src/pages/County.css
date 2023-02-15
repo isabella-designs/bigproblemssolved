@@ -19,7 +19,7 @@
     min-height: 100vh;
 }
 
-.buttons {
+.buttonsCounty {
     background-color:#2a196e;
     border: none;
     color: #ECE9FD;
@@ -103,5 +103,43 @@
     font-weight: bold;
     color: #6e5100;
     font-size: 20px;
-   
+}
+
+.scrollableContainerCounty {
+    padding: 10px;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-columns: 90%;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+}
+
+.cardCounty {
+    background-color: #F6F8EA;
+    padding: 10px;
+    border-radius: 25px;
+    scroll-snap-align: center;
+    transition: all 0.2s;
+}
+
+.scrollableContainerCounty::-webkit-scrollbar {
+    height: 12px;
+}
+
+.scrollableContainerCounty::-webkit-scrollbar-thumb,
+.scrollableContainerCounty::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+
+.scrollableContainerCounty::-webkit-scrollbar-thumb {
+    background: #DF6053;
+}
+  
+.scrollableContainerCounty::-webkit-scrollbar-track {
+    background: #F6F8EA;
+    margin-left: 10px;
+    margin-right: 10px;
 }

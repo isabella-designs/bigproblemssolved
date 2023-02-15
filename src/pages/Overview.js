@@ -22,9 +22,9 @@ function Overview() {
     return (
         <div class="overview">
             <h1 class='heading'> Most Factual News</h1>
-            <div class="scrollableContainer">
+            <div class="scrollableContainerOverview">
                 {graphs.map((item, index) => (
-                    <div class="card">
+                    <div class="cardOverview">
                         <Graphs></Graphs>
                         <p>{item.headline}</p>
                         <h1 class="topicHeader" > {item.graphObject}</h1>

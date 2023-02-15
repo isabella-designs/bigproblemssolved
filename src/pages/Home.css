@@ -1,4 +1,4 @@
-.scrollableContainer {
+.scrollableContainerHome {
     padding: 10px;
     overflow-x: scroll;
     display: grid;
@@ -10,7 +10,7 @@
     scroll-snap-align: center;
 }
 
-.card {
+.cardHome {
     background-color: #F6F8EA;
     padding: 10px;
     border-radius: 25px;
@@ -18,20 +18,20 @@
     transition: all 0.2s;
 }
 
-.scrollableContainer::-webkit-scrollbar {
+.scrollableContainerHome::-webkit-scrollbar {
     height: 12px;
 }
 
-.scrollableContainer::-webkit-scrollbar-thumb,
-.scrollableContainer::-webkit-scrollbar-track {
+.scrollableContainerHome::-webkit-scrollbar-thumb,
+.scrollableContainerHome::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 
-.scrollableContainer::-webkit-scrollbar-thumb {
+.scrollableContainerHome::-webkit-scrollbar-thumb {
     background: #DF6053;
 }
   
-.scrollableContainer::-webkit-scrollbar-track {
+.scrollableContainerHome::-webkit-scrollbar-track {
     background: #F6F8EA;
     margin-left: 10px;
     margin-right: 10px;
@@ -49,7 +49,7 @@
     font-size: 40px;
 }
 
-.topicHeader {
+.topicHeaderHome {
     color: #9F9900;
     padding: 15px;
     font-size: 40px;
@@ -86,7 +86,7 @@
     padding-bottom: 20px;
 }
 
-li {
+.listHome {
     padding-bottom: 5px;
 }
 

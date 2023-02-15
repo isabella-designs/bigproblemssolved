@@ -1,4 +1,4 @@
-.scrollableContainer {
+.scrollableContainerOverview {
     padding: 10px;
     overflow-x: scroll;
     display: grid;
@@ -10,7 +10,7 @@
     scroll-snap-align: center;
 }
 
-.card {
+.cardOverview {
     background-color: #f3f7ff;
     padding: 10px;
     border-radius: 25px;
@@ -18,16 +18,16 @@
     transition: all 0.2s;
 }
 
-.scrollableContainer::-webkit-scrollbar-thumb,
-.scrollableContainer::-webkit-scrollbar-track {
+.scrollableContainerOverview::-webkit-scrollbar-thumb,
+.scrollableContainerOverview::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 
-.scrollableContainer::-webkit-scrollbar-thumb {
+.scrollableContainerOverview::-webkit-scrollbar-thumb {
     background: #2556D7;
 }
   
-.scrollableContainer::-webkit-scrollbar-track {
+.scrollableContainerOverview::-webkit-scrollbar-track {
     background: #f3f7ff;
     margin-left: 10px;
     margin-right: 10px;

@@ -44,9 +44,9 @@ function County() {
     return (
     <div class = "county"> 
         <h1 class="heading">County Information</h1>
-            <div class="scrollableContainer">
+            <div class="scrollableContainerCounty">
                 {graphs.map((item, index) => (
-                    <div className="card">
+                    <div className="cardCounty">
                         <div className = "circle">  
                         </div>
                         <p>{item.headline}</p>
@@ -55,9 +55,9 @@ function County() {
                 ))}
             </div>
             <div class = "toggle">
-                <button class = "buttons">County</button>
-                <button class = "buttons">State</button>
-                <button class = "buttons">Nation</button>
+                <button class = "buttonsCounty">County</button>
+                <button class = "buttonsCounty">State</button>
+                <button class = "buttonsCounty">Nation</button>
             </div>
             <div class = "block">
             <div class = "column1"> 

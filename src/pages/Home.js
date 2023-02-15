@@ -31,14 +31,14 @@ function Home() {
         <div class="home">
             {console.log(globalState)}
             <h1 class="heading"> Topics in the News</h1>
-            <div class="scrollableContainer">
+            <div class="scrollableContainerHome">
                 {topics.map((item, index) => (
-                    <div className="card">
+                    <div className="cardHome">
                         <img class ="image" src= {item.img}></img>
-                        <h1 class='topicHeader'>{item.headline}</h1>
+                        <h1 class='topicHeaderHome'>{item.headline}</h1>
                         <div class="bulletStyle">
                         {item.bullets.map((item, index) => (
-                            <li>{item}</li>
+                            <li class="listHome">{item}</li>
                         ))}
                          </div>
                         <button  onClick = {onClick} class="buttonStyle"> Learn More </button>
