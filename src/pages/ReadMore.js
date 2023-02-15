@@ -15,16 +15,18 @@ const ReadMore = ({ onClose, item }) => {
                 <FontAwesomeIcon className="fa-3x" icon={faXmark} />
             </button>
             <h1>{item.topic}</h1>
-            <p>Summary of Past Month's Inflation Content:</p>
+            <p>Summary of Past Month's {item.topic} Content:</p>
             <div class="bulletStyle">
-                {item.summary.map((item, index) => (
-                    <li>{item}</li>
+                {item.summary.map((subitem, index) => (
+                    <li>{subitem}</li>
                 ))}
             </div>
             <p>Links to Full News Articles with Low Bias and High Accuracy</p>
             <div class="bulletStyle">
-                {item.links.map((item, index) => (
-                    <li>{item}</li>
+                {item.links.map((subitem, index) => (
+                    <li>
+                        <a href={subitem.link}>{subitem.headline}</a>
+                    </li>
                 ))}
             </div>
         </div>

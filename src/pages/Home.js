@@ -4,7 +4,6 @@ import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
 import ReadMore from './ReadMore.js'
 import InputArticle from './InputArticle.js'
-import sunscreen from '../assets/sunscreen.jpg'
 import newsTopicMap from '../assets/NewsTopics.js'
 
 function Home() {
@@ -39,10 +38,10 @@ function Home() {
                         <img class ="image" src= {item.img}></img>
                         <h1 class='topicHeaderHome'>{item.topic}</h1>
                         <div class="bulletStyle">
-                            <li class="listHome">{item.coverage}% of news coverage was on {item.topic} in the past month</li>
-                            <li class="listHome">The average bias present in {item.topic} articles is {item.bias}% </li>
-                            <li class="listHome">{item.topic} has a {item.countyImpact} correlation with county health, which is a {item.countyImpactBucket} correlation</li>
-                            <li class="listHome">The best news source for {item.topic} is {item.bestSource}</li>
+                            <li class="listHome">{item.topic} is a {item.status} news topic</li>
+                            <li class="listHome">{item.coverage}% of news coverage from the past month was on {item.topic.toLowerCase()}</li>
+                            <li class="listHome">The common causes of bias present in {item.topic.toLowerCase()} articles include {item.bias} </li>
+                            <li class="listHome">{item.topic} has a correlation of {item.countyImpact} with overall county health, which is a {item.countyImpactBucket} correlation</li>
                          </div>
                         <button  onClick = {onClick(item)} class="homeButtonStyle"> Learn More </button>
                     </div>
