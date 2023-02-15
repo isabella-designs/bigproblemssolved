@@ -3,6 +3,7 @@ import React from "react";
 import { useGlobalState } from "../GlobalState.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import riskLinkMap from '../assets/BiggestCountyRiskLinks.js'
 
 function BiggestCountyRisk({onClose, name}) {
     const [globalState, updateGlobalState] = useGlobalState()
@@ -16,13 +17,18 @@ function BiggestCountyRisk({onClose, name}) {
           <button class = "closeButton" onClick = {closeWindow}>
             <FontAwesomeIcon className = "fa-3x" icon= {faXmark} />
         </button>
-        <h1>{name}</h1>
-        <div class = "bulletSummary"> 
-        <p class = "summaryHeader">Useful links on [this] topic</p>
-        <p class = "bullets">
-            tagged links
-        </p>
-        </div>
+        <p class = "summaryHeader">Summary of Recent News on Insufficient Sleep</p>
+        <div class="bulletGroup">
+                {riskLinkMap[5].summary.map((item, index) => (
+                    <li>{item}</li>
+                ))}
+            </div>
+            <p class = "summaryHeader">Links to Full News Articles with Low Bias and High Accuracy</p>
+        <div class="bulletGroup">
+                {riskLinkMap[5].links.map((item, index) => (
+                    <li>{item}</li>
+                ))}
+            </div>
         </div>
     )
 }

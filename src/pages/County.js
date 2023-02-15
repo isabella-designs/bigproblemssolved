@@ -68,9 +68,9 @@ function County() {
             </div>
             <div class = "block">
             <div class = "column1"> 
-            <p>Biggest County Risk</p>
-            <p>{globalState.countyData["Biggest Risk"]}</p>
-            <p>This is {globalState.countyData["Biggest Risk Difference"]}% worse than national average</p>
+            <p>Biggest Risk for Your County:</p>
+            <p class = "biggestRiskSubtext">Insufficent Sleep ({globalState.countyData["% Insufficient Sleep"]}% of county suffering from insufficient sleep)</p>
+            <p class = "biggestRiskSubtext">Insufficent Sleep affects both physical and mental health, as well as increases risk for early mortality</p>
             </div> 
             <div class = "column2">
                 <button onClick = {onCountyRiskClick} class = "risk">See Recent News for Biggest County Risk</button>

@@ -60,7 +60,13 @@
     color: #d4a823;
     font-weight: bold;
     font-size: 20px;
-    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.biggestRiskSubtext {
+    font-weight: normal;
+    font-size: 18px;
 }
 
 .column2 {
