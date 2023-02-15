@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from "./Footer.js";
 import FullCounty from './FullCounty.js'
-import Heatmap from './Heatmap.js'
+import HeatmapGraph from './Heatmap.js'
 import BiggestCountyRisk from './BiggestCountyRisk.js'
 import Circle from './Circle.js'
 import countyVisualizations from '../assets/CountyVisualizations.js'
@@ -85,8 +85,8 @@ function County() {
              </FullCounty>
             }
             {showMap &&
-             <Heatmap data = {globalState.countyData} onClose = {onClose}>
-             </Heatmap>
+             <HeatmapGraph data = {globalState.countyData} onClose = {onClose}>
+             </HeatmapGraph>
             }
              {showCountyRisk &&
              <BiggestCountyRisk onClose = {onCountyClose}>

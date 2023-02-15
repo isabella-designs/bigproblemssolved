@@ -4,8 +4,10 @@ import React from "react";
 import './Heatmap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import Heatmap from 'highcharts/modules/heatmap.js';
+Heatmap(Highcharts);
 
-const Heatmap = ({ data, onClose }) => {
+const HeatmapGraph = ({ data, onClose }) => {
   const closeWindow = (event) => {
     onClose()
   }
@@ -55,4 +57,4 @@ const Heatmap = ({ data, onClose }) => {
     </div>
   )
 }
-export default Heatmap;
+export default HeatmapGraph;
