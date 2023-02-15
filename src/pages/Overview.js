@@ -373,12 +373,12 @@ function Overview() {
                 ))}
             </div>
             <div class="topics">
-                <h1> Most Popular and Accurate News This Week</h1>
+                <h1> Summary of Monthly News on Overreported Topics</h1>
                 <div>
-                    <button class="newsButton" name="disease" onClick={onClick}>Disease</button>
-                    <button class="newsButton" name="cancer" onClick={onClick}>Cancer</button>
-                    <button class="newsButton" name="finance" onClick={onClick}>Finance</button>
-                    <button class="newsButton" name="politics" onClick={onClick}>Politics</button>
+                    <button class="newsButton" name="Inflation" onClick={onClick}>Inflation</button>
+                    <button class="newsButton" name="Healthcare" onClick={onClick}>Healthcare</button>
+                    <button class="newsButton" name="Unemployment" onClick={onClick}>Unemployment</button>
+                    <button class="newsButton" name="Crime" onClick={onClick}>Crime</button>
                 </div>
                 {showLearnMore &&
                     <SpecificNewsTopics name={clickedButton} onClose={onClose}>
