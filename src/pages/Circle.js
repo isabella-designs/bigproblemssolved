@@ -8,7 +8,7 @@ import HCSoldGauge from 'highcharts/modules/solid-gauge';
 ChartModuleMore(Highcharts);
 HCSoldGauge(Highcharts);
 
-const Circle = ({value}) => {
+const Circle = ({ value }) => {
     const Options = {
         chart: {
             type: 'solidgauge',
@@ -17,10 +17,10 @@ const Circle = ({value}) => {
         },
         title: {
             text: ''
-            },
-            credits: {
-                enabled: false
-              },
+        },
+        credits: {
+            enabled: false
+        },
         pane: {
             startAngle: 0,
             endAngle: 360,
@@ -33,14 +33,14 @@ const Circle = ({value}) => {
                 borderWidth: 0
             }]
         },
-    
+
         yAxis: {
             min: 0,
             max: 100,
             lineWidth: 0,
             tickPositions: []
         },
-    
+
         plotOptions: {
             solidgauge: {
                 dataLabels: {
@@ -53,8 +53,8 @@ const Circle = ({value}) => {
         },
         tooltip: {
             enabled: false
-          },
-    
+        },
+
         series: [{
             name: 'Move',
             data: [{
@@ -69,7 +69,7 @@ const Circle = ({value}) => {
 
     return (
         <div>
-            <HighchartsReact highcharts = {Highcharts} options = {Options}></HighchartsReact>
+            <HighchartsReact highcharts={Highcharts} options={Options}></HighchartsReact>
         </div>
     )
 }

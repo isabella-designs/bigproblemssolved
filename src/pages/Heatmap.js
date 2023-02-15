@@ -12,11 +12,15 @@ const Heatmap = ({ data, onClose }) => {
 
   const Options = {
     chart: {
-      type: 'heatmap'
+      type: 'heatmap',
+      backgroundColor: null,
     },
     title: {
       text: 'Correlation Heatmap of Various Health Outcomes to Health Factors'
     },
+    credits: {
+      enabled: false
+  },
     xAxis: {
       categories: ['Years Of Potential Life Lost Rate', '% Fair or Poor Health', '% Frequent Mental Distress', '% Frequent Physical Distress']
     },
