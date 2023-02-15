@@ -3,7 +3,7 @@ import React from "react";
 import { useGlobalState } from "../GlobalState.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import riskLinkMap from '../assets/BiggestCountyRiskLinks.js'
+import newsTopicMap from '../assets/NewsTopics.js'
 
 function BiggestCountyRisk({onClose, name}) {
     const [globalState, updateGlobalState] = useGlobalState()
@@ -19,14 +19,16 @@ function BiggestCountyRisk({onClose, name}) {
         </button>
         <p class = "summaryHeader">Summary of Recent News on Insufficient Sleep</p>
         <div class="bulletGroup">
-                {riskLinkMap[5].summary.map((item, index) => (
+                {newsTopicMap[5].summary.map((item, index) => (
                     <li>{item}</li>
                 ))}
             </div>
             <p class = "summaryHeader">Links to Full News Articles with Low Bias and High Accuracy</p>
         <div class="bulletGroup">
-                {riskLinkMap[5].links.map((item, index) => (
-                    <li>{item}</li>
+                {newsTopicMap[5].links.map((subitem, index) => (
+                    <li>
+                        <a href={subitem.link}>{subitem.headline}</a>
+                    </li>
                 ))}
             </div>
         </div>

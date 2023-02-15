@@ -22,7 +22,6 @@ function FullCounty({data, onClose}) {
     "Preventable Hospitalization Rate",
     "% With Annual Mammogram",
     "% Vaccinated",
-    "High School Graduation Percentage",
     "% Some College",
     "% Unemployed",
     "% Children in Poverty",
@@ -66,7 +65,6 @@ function FullCounty({data, onClose}) {
                     </tr>
                 ))}
         </table>
-        <p>**Years of Potential Life Lost Rate is cumulative for the entire county**</p>
         </div>
     )
 }
