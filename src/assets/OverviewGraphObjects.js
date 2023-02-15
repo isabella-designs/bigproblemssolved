@@ -1,5 +1,46 @@
 const overviewGraphObjects = [
     {
+        "Description": "Fox News topic coverage from 2021 as a percentage vs percentage of population who believe topic is a big issue in the US, showing a correlation between how frequently a topic is covered and how important the public perceives the topic to be", "options":
+        {
+            chart: {
+                type: 'column',
+                backgroundColor: null,
+            },
+            title: {
+                text: 'Annual Topic Coverage vs Public Perceived Importance'
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: [
+                    'Inflation',
+                    'Violent Crime',
+                    'Affordability of Healthcare',
+                    'Covid-19',
+                    'Unemployment',
+                    'Racism',
+                    'Illegal Immigration',
+                ],
+                crosshair: true
+            },
+            yAxis:{
+                title: {
+                    text: 'Percentage'
+                },
+            },
+            series: [{
+                name: 'Fox News',
+                data: [54.48, 16.52, 6.57, 9.05, 0.91, 1.58, 10.9]
+
+            }, {
+                name: 'Public Perception',
+                data: [70, 54, 55, 47, 23, 35, 48]
+
+            }]
+        }
+    },
+    {
         "Description": "description placeholder", "options":
         {
             chart: {

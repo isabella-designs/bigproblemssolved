@@ -836,6 +836,6 @@ const placeholderCountyData = {
     "Average Number of Mentally Unhealthy Days National": "4.14",
     "Median Household Income National": "67001.23",
     "Food Environment Index National": "7.57",
-    "Average Daily PM2.5 National": "7.68"
+    "Average Daily Fine Particulate Matter in the Air National": "7.68"
 }
 export default placeholderCountyData;

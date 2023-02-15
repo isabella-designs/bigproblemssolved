@@ -7,7 +7,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function FullCounty({data, onClose}) {
     const [globalState, updateGlobalState] = useGlobalState()
-    const healthList = ["Years of Potential Life Lost Rate", "% Fair or Poor Health",
+    const healthList = ["% Fair or Poor Health",
     "% Frequent Mental Distress",
     "% Frequent Physical Distress",
     "% Adults with Diabetes",
