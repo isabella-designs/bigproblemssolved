@@ -2,24 +2,14 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import React from "react";
 
-const Graphs = () => {
-const Options = {chart: {
-    type: 'spline'
-  },
-  title: {
-    text: 'My chart'
-  },
-  series: [
-    {
-      data: [1, 2, 1, 4, 3, 6]
-    }
-  ]}
+const Graphs = ({options}) => {
 
 
 
     return (
         <div>
-            <HighchartsReact highcharts = {Highcharts} options = {Options}></HighchartsReact>
+          {console.log(options)}
+            <HighchartsReact highcharts = {Highcharts} options = {options}></HighchartsReact>
         </div>
     )
 }
