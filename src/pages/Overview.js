@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
 import Graphs from './Graphs.js'
-import Maps from './Maps.js'
 import SpecificNewsTopics from './SpecificNewsTopics'
 
 function Overview() {

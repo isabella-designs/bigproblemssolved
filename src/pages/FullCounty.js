@@ -1,7 +1,6 @@
 import './FullCounty.css';
 import React from "react";
 import { useGlobalState } from "../GlobalState.js"
-import close from "../assets/close.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
