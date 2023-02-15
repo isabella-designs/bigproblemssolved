@@ -92,6 +92,7 @@ function County() {
              <BiggestCountyRisk onClose = {onCountyClose}>
              </BiggestCountyRisk>
             }
+            <div class="spacer"> </div>
          <Footer>
 
         </Footer>

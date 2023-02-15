@@ -94,3 +94,7 @@
 .own-article {
     margin-top: 10px;
 }
+
+.spacer {
+    clear: both; height: 120px;
+}

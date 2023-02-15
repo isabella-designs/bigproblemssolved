@@ -59,6 +59,8 @@ function Home() {
              <InputArticle onClose = {onArticleClose}>
              </InputArticle>
             }
+
+            <div class="spacer"> </div>
             <Footer>
 
             </Footer>
