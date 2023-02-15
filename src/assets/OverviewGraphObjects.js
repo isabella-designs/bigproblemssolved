@@ -41,7 +41,7 @@ const overviewGraphObjects = [
         }
     },
     {
-        "Description": "description placeholder", "options":
+        "Description": "Click on each bar in the chart to see the weekly topic coverage frequency of each news source.", "options":
         {
             chart: {
                 type: 'column',
