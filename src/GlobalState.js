@@ -1,4 +1,5 @@
 import { useState, createContext, useContext } from "react"
+import placeholderCountyData from './assets/PlaceholderCountyData';
 
 // The initial state, you can setup any properties initilal values here.
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
     newsTopicsSelected: [],
     fipsCode: "",
     underCoverTopicsSelected: [],
-    countyData: {},
+    countyData: placeholderCountyData,
 }
 
 // create the context object for delivering your state across your app.

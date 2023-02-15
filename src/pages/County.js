@@ -5,7 +5,7 @@ import Footer from "./Footer.js";
 import FullCounty from './FullCounty.js'
 import Heatmap from './Heatmap.js'
 import BiggestCountyRisk from './BiggestCountyRisk.js'
-
+import Circle from './Circle.js'
 
 
 function County() {
@@ -47,9 +47,8 @@ function County() {
             <div class="scrollableContainerCounty">
                 {graphs.map((item, index) => (
                     <div className="cardCounty">
-                        <div className = "circle">  
-                        </div>
                         <p>{item.headline}</p>
+                        <Circle value={80}/>
                         <h1>{item.graphObject}</h1>
                     </div>
                 ))}

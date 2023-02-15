@@ -140,7 +140,7 @@ function Welcome() {
                   GSheetReader(
                     countyOptions,
                     results => {
-                      console.log(results)
+                      console.log(results[0])
                       updateGlobalState("countyData", results[0])
                      
                     },

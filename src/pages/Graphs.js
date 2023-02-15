@@ -8,7 +8,6 @@ const Graphs = ({options}) => {
 
     return (
         <div>
-          {console.log(options)}
             <HighchartsReact highcharts = {Highcharts} options = {options}></HighchartsReact>
         </div>
     )
