@@ -1,4 +1,4 @@
-const riskLinkMap = {
+const riskLinkMap = [
     {"Years of Potential Life Lost Rate": [] }, 
     {"% Fair or Poor Health": []},
     {"% Frequent Mental Distress": []},
@@ -22,6 +22,6 @@ const riskLinkMap = {
     {"Violent Crime Rate": []},
     {"Average Daily Fine Particulate Matter in the Air": []},
     {"% Severe Housing Problems": []},
-}
+]
 
 export default risklinkMap;

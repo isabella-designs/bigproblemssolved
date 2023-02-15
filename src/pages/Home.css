@@ -65,9 +65,10 @@
     padding-top: 10px;
     font-size: 18px;
     color: #9197AA;
+    padding-bottom: 10px;
 }
 
-.buttonStyle {
+.homeButtonStyle {
     color: #97281D;
     padding: 15px;
     font-size: 30px;
