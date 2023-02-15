@@ -21,14 +21,17 @@ const InputArticle = ({onClose}) => {
         <button class = "closeButton" onClick = {closeWindow}>
         <FontAwesomeIcon className = "fa-3x" icon= {faXmark} />
         </button>
-        <h1>Input an Article for Accurate Analysis</h1>
+        <div class = "inputContent">
+
+        <h1 class="inputHeader">Input an Article for Accurate Analysis</h1>
         {!AnalyzeArticle && <div>
             <p>Copy and paste the full article text from any news source for a full analysis on the accuracy and potential biases of the text and source</p>
-        <textarea rows="4" cols = "40" ></textarea>
-        <button  onClick = {analyzeArticleClicked} class="buttonInputStyle own-article">Analyze</button>
-            </div>
-
+            <p>** feature coming soon! **</p>
+        {/* <textarea rows="4" cols = "40" ></textarea>
+        <button  onClick = {analyzeArticleClicked} class="buttonInputStyle own-article">Analyze</button> */}
+        </div>
         }
+        </div>
           {AnalyzeArticle && <div>
             <p>placeholder</p>
         <button  onClick = {analyzeAnother} class="buttonInputStyle own-article">Analyze Another Article</button>

@@ -61,11 +61,11 @@ function County() {
                     </div>
                 ))}
             </div>
-            <div class = "toggle">
+            {/* <div class = "toggle">
                 <button class = "buttonsCounty">County</button>
                 <button class = "buttonsCounty">State</button>
                 <button class = "buttonsCounty">Nation</button>
-            </div>
+            </div> */}
             <div class = "block">
             <div class = "column1"> 
             <p>Biggest Risk for Your County:</p>

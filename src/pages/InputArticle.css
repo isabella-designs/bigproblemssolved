@@ -32,3 +32,14 @@
     font-weight: bold;
     margin-top: 20px;
 }
+
+.inputContent {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.inputHeader {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}

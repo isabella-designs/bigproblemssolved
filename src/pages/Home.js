@@ -50,7 +50,7 @@ function Home() {
                 ))}
 
             </div>
-            <button onClick = {onArticleClick} class="buttonStyle own-article">Input Your Own Article</button>
+            <button onClick = {onArticleClick} class="homeButtonStyle own-article">Input Your Own Article</button>
             {showLearnMore &&
              <ReadMore onClose = {onClose} item={clickedItem}>
              </ReadMore>
