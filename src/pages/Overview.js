@@ -5,15 +5,15 @@ import Footer from './Footer.js'
 import Graphs from './Graphs.js'
 import SpecificNewsTopics from './SpecificNewsTopics'
 import overviewGraphObjects from '../assets/OverviewGraphObjects.js'
+import newsTopicMap from '../assets/NewsTopics.js'
 
 
 function Overview() {
     const [globalState, updateGlobalState] = useGlobalState()
-
     const [showLearnMore, setshowLearnMore] = useState(false);
-    const [clickedButton, setclickedButton] = useState("");
-    const onClick = (event) => {
-        setclickedButton(event.target.name)
+    const [clickedButton, setclickedButton] = useState({});
+    const onClick = (item) => () => {
+        setclickedButton(item)
         setshowLearnMore(true)
     }
     const onClose = () => {
@@ -35,13 +35,13 @@ function Overview() {
             <div class="topics">
                 <h1> Summary of Monthly News on Overreported Topics</h1>
                 <div>
-                    <button class="newsButton" name="Inflation" onClick={onClick}>Inflation</button>
-                    <button class="newsButton" name="Healthcare" onClick={onClick}>Healthcare</button>
-                    <button class="newsButton" name="Unemployment" onClick={onClick}>Unemployment</button>
-                    <button class="newsButton" name="Crime" onClick={onClick}>Crime</button>
+                    <button class="newsButton" onClick={onClick(newsTopicMap[0])}>Inflation</button>
+                    <button class="newsButton" onClick={onClick(newsTopicMap[3])}>Healthcare</button>
+                    <button class="newsButton" onClick={onClick(newsTopicMap[4])}>Unemployment</button>
+                    <button class="newsButton" onClick={onClick(newsTopicMap[2])}>Crime</button>
                 </div>
                 {showLearnMore &&
-                    <SpecificNewsTopics name={clickedButton} onClose={onClose}>
+                    <SpecificNewsTopics item={clickedButton} onClose={onClose}>
                     </SpecificNewsTopics>
                 }
             </div>

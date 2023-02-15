@@ -3,13 +3,13 @@
     background-color: #618AF2;
     width: auto;
     border-radius: 25px;
-    height: 130px;
-    padding-bottom: 40%;
     border: none;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 30px;
-    color: #E7A1AB;
+    color: black;
+    padding: 20px;
+    text-align: left;
 }
 
 .summaryHeader {
