@@ -1,6 +1,6 @@
 const overviewGraphObjects = [
     {
-        "Description": "Fox News topic coverage from 2021 as a percentage vs percentage of population who believe topic is a big issue in the US, showing a correlation between how frequently a topic is covered and how important the public perceives the topic to be", "options":
+        "Description": "Fox News and New York Times topic coverage from 2021 as a percentage vs percentage of population who believe topic is a big issue in the US, showing a correlation between how frequently a topic is covered and how important the public perceives the topic to be, even when examining two news sources with differing political biases. ", "options":
         {
             chart: {
                 type: 'column',
@@ -24,7 +24,7 @@ const overviewGraphObjects = [
                 ],
                 crosshair: true
             },
-            yAxis:{
+            yAxis: {
                 title: {
                     text: 'Percentage'
                 },
@@ -34,8 +34,12 @@ const overviewGraphObjects = [
                 data: [54.48, 16.52, 6.57, 9.05, 0.91, 1.58, 10.9]
 
             }, {
-                name: 'Public Perception',
-                data: [70, 54, 55, 47, 23, 35, 48]
+                name: 'New York Times',
+                data: [25.42, 20.49, 12.09, 30.69, 2.79, 4.57, 3.94]
+    
+            }, {
+            name: 'Public Perception',
+            data: [70, 54, 55, 47, 23, 35, 48]
 
             }]
         }
@@ -53,7 +57,7 @@ const overviewGraphObjects = [
             credits: {
                 enabled: false
             },
-            yAxis:{
+            yAxis: {
                 title: {
                     text: 'Percentage'
                 },
@@ -73,11 +77,10 @@ const overviewGraphObjects = [
                 ],
                 crosshair: true
             },
-            series: {
+            series: [{
                 name: "News Coverage Percentage",
                 data: [17.21, 15.784, 19.070, 5.629, 13.909, 1.391, 2.371, 0.755, 0.7833]
-            }
-                
+            }]
         }
     },
     {
@@ -113,27 +116,27 @@ const overviewGraphObjects = [
                         {
                             name: 'New York Times',
                             y: -2.13,
-                            
+
                         },
                         {
                             name: 'Fox News',
                             y: 8.66,
-                           
+
                         },
                         {
                             name: 'ABC News',
                             y: -4.41,
-                           
+
                         },
                         {
                             name: 'Wall Street Journal',
                             y: 0.51,
-                            
+
                         },
                         {
                             name: 'CNN',
                             y: -7.64,
-                            
+
                         },
 
                     ]
