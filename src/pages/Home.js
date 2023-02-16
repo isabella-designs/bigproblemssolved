@@ -2,6 +2,7 @@ import './Home.css';
 import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
+import Header from './Header.js'
 import ReadMore from './ReadMore.js'
 import InputArticle from './InputArticle.js'
 import newsTopicMap from '../assets/NewsTopics.js'
@@ -31,6 +32,7 @@ function Home() {
 
     return (
         <div class="home">
+            <Header> </Header>
             <h1 class="heading"> Topics in the News</h1>
             <div class="scrollableContainerHome">
                 {newsTopicMap.map((item, index) => (

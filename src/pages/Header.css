@@ -1,0 +1,11 @@
+.header {
+    float: right;
+}
+
+.headerLink {
+    border: none;
+    float: right;
+    background-color: transparent;
+    color: black;
+    opacity: 50%;
+}

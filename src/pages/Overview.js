@@ -2,6 +2,7 @@ import './Overview.css';
 import React, { useState } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from './Footer.js'
+import Header from './Header.js'
 import Graphs from './Graphs.js'
 import SpecificNewsTopics from './SpecificNewsTopics'
 import overviewGraphObjects from '../assets/OverviewGraphObjects.js'
@@ -22,6 +23,7 @@ function Overview() {
     }
     return (
         <div class="overview" >
+            <Header> </Header>
             <h1 class='heading'> Most Factual News</h1>
             <div class="scrollableContainerOverview">
                 {overviewGraphObjects.map((item, index) => (

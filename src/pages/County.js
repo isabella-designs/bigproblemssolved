@@ -2,6 +2,7 @@ import './County.css';
 import React, { useState, useEffect } from "react";
 import { useGlobalState } from "../GlobalState.js"
 import Footer from "./Footer.js";
+import Header from './Header.js'
 import FullCounty from './FullCounty.js'
 import HeatmapGraph from './Heatmap.js'
 import BiggestCountyRisk from './BiggestCountyRisk.js'
@@ -51,6 +52,7 @@ function County() {
 
     return (
     <div class = "county"> 
+    <Header> </Header>
         <h1 class="heading">County Information</h1>
             <div class="scrollableContainerCounty">
                 {countyVisualizations.map((item, index) => (
